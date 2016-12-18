@@ -8,7 +8,7 @@ const {
 
 export default Component.extend({
   classNameBindings: ['statusClass'],
-  classNames: ['funds-recipient'],
+  classNames: ['funds-recipient', 'account-setup__section'],
 
   status: computed.alias('account.recipientStatus'),
 

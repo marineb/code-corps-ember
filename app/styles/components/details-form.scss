@@ -1,0 +1,50 @@
+.details-form {
+  p:first-child {
+    margin-top: 0;
+  }
+
+  input[type="text"] {
+    background: white;
+  }
+
+  input[type="submit"] {
+    margin-left: 140px;
+  }
+
+  .input-section {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+
+    .input-section-label {
+      width: 140px;
+    }
+
+    .input-section-content {
+      flex-grow: 1;
+    }
+
+    .input-line {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .input--state {
+        width: 48%;
+
+        .select-state select {
+          width: 100%;
+        }
+      }
+
+      .input--state,
+      .input--zipcode {
+        width: 48%;
+      }
+    }
+
+    .select-country select {
+      width: 100%;
+    }
+  }
+}

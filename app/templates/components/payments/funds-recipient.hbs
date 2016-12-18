@@ -5,11 +5,11 @@
   <h1>Funds Recipient</h1>
 </aside>
 
-{{#if (eq status 'required')}}
-  <section class="details-form">
-    TODO: details-form-component goes here
-  </section>
-{{/if}}
+<!-- {{#if (eq status 'required')}} -->
+<!-- {{/if}} -->
+<section class="details-form">
+  {{details-form}}
+</section>
 
 {{#if (eq status 'verifying')}}
   <section class="verification-document">

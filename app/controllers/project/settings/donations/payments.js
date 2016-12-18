@@ -23,7 +23,7 @@ export default Controller.extend({
   stripeConnectAccount: alias('project.organization.stripeConnectAccount'),
 
   actions: {
-    onRecipientInformationSubmitted(organization, email, recipientInformation) {
+    onRecipientDetailsSubmitted(organization, email, recipientInformation) {
       let accountParams = merge(recipientInformation, { organization, email });
       get(this, 'store').createRecord('stripe-connect-account', accountParams)
                         .save();
@@ -41,6 +41,16 @@ export default Controller.extend({
           .then(({ tokenData, stripeConnectAccount }) => this._addBankAccount(tokenData, stripeConnectAccount))
           .catch((response) => this._handleError(response))
           .finally(() => set(this, 'isBusy', false));
+    },
+
+    onPersonalIdNumberSubmitted() {
+      // TODO: FIX THIS
+      return;
+    },
+
+    onVerificationDocumentSubmitted() {
+      // TODO: FIX THIS
+      return;
     }
   },
 
